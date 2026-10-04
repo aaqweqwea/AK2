@@ -1,0 +1,16 @@
+cd /srv/ak2/kzirx/lab1
+cd /srv/ak2/kzirx/lab1/commands
+date -u; whoami; hostname
+ping -i 2 127.0.0.1 > user-ping.log 2>&1 &
+echo $! > user-ping.pid
+fg
+jobs -l
+bg
+ps -ef | grep "[p]ing"
+kill -TERM "$(cat user-ping.pid)"
+ps -ef | grep "[p]ing"
+kill -TERM "$(cat root-ping.pid)"
+sudo kill -KILL "$(cat root-ping.pid)"
+kill -TERM "$(cat vlc.pid)"
+ps -p "$(cat root-ping.pid)" -o pid,user,stat,comm
+history -w /srv/ak2/kzirx/lab1/history-terminal-2.txt

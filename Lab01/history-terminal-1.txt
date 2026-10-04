@@ -1,0 +1,98 @@
+cd /srv/ak2/kzirx/lab1
+cd /srv/ak2/kzirx/lab1
+date -u
+whoami
+hostname
+uname -s; uname -n; uname -r; uname -v; uname -m; uname -p
+sudo apt update
+sudo apt install --only-upgrade -y vim
+cat /etc/apt/sources.list.d/ubuntu.sources
+sudo apt install -y vim
+cd
+mkdir -p Downloads
+cd Downloads
+MANPAGER=cat man ls
+ls -la
+cd /srv/ak2/kzirx/lab1
+mkdir -p commands && cd commands
+apt download hello
+dpkg -i hello_*.deb
+sudo dpkg -i hello_*.deb
+cd /
+sudo -i
+cd /srv/ak2/kzirx/lab1/commands
+echo hi all
+echo "$PWD hi all here!"
+touch hi.sh
+echo "$PATH"
+vi -e hi.sh
+./hi.sh
+chmod a+x hi.sh
+chmod 777 hi.sh
+./hi.sh
+./hi.sh Ukraine
+mkdir -p scripts Documents
+cp hi.sh scripts/
+cp scripts Documents/
+cp -r scripts Documents/
+cd scripts
+mv hi.sh ../hi-copy.sh
+cd ..
+rm Documents/scripts
+rm -r Documents/scripts
+cd /bin
+ls -l | head -35
+cd ../..
+cd /srv/ak2/kzirx/lab1/commands
+tar -cvf scripts.tar scripts
+cat hi.sh
+cat /var/log/dpkg.log
+tail -20 /var/log/dpkg.log
+less /var/log/dpkg.log
+cd /
+find /etc /usr -name dhcp 2>/dev/null
+find /etc /usr -name "*dhcp*" 2>/dev/null
+find /etc /usr -name "*dhcp*" 2>/dev/null | grep -i --color=always dhcp
+find /etc /usr -name "*dhcp*" 2>/dev/null | grep -i --color=always etc
+ping -c 3 -W 2 google.com
+cd /srv/ak2/kzirx/lab1/commands
+ping -c 5 -i 1 google.com > ping-background.log 2>&1 &
+date | tee date.log
+wait
+sudo sh -c 'ping -i 2 127.0.0.1 > /srv/ak2/kzirx/lab1/commands/root-ping.log 2>&1 & echo $! > /srv/ak2/kzirx/lab1/commands/root-ping.pid'
+DISPLAY=:0 XAUTHORITY=/run/user/1000/gdm/Xauthority vlc --no-video-title-show > vlc.log 2>&1 &
+echo $! > vlc.pid
+ls -l
+cd /bin
+ls | head -50
+echo "$PATH"
+set
+whoami
+cd /etc
+ls | head -50
+cd ..
+cd lib
+ls | head -50
+dmesg
+sudo dmesg | tee /srv/ak2/kzirx/lab1/logs/dmesg-before-clear.log
+ls -l /dev | head -45
+sudo dmesg -C
+sudo dmesg
+df -h
+cd /home
+ls -la
+lsmod
+cd /proc
+cat cpuinfo
+echo 1 > /proc/sys/net/ipv4/ip_forward
+sudo echo 1 > /proc/sys/net/ipv4/ip_forward
+sudo -i
+cd /srv/ak2/kzirx/lab1/commands
+echo vika > 1.txt
+cat 1.txt
+echo vasya > 2.txt
+cat 2.txt
+diff 1.txt 2.txt
+history
+lspci
+history -w /srv/ak2/kzirx/lab1/history-terminal-1.txt
