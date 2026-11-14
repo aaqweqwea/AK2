@@ -1,0 +1,6 @@
+ccflags-y += -I$(src)/inc
+obj-m := hello1.o hello2.o
+
+ifeq ($(TRACE_DEBUG),1)
+ccflags-y += -DHELLO_FORCE_DEBUG
+endif
